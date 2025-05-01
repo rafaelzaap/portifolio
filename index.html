@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rafael Silva</title>
 </head>
 <body>
-    
+    <nav class="navegacao">
+        <ul>
+            <li>
+                <a href="#inicio">Início</a>
+            </li>
+            <li>
+                <a href="#sobre">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos">Contatos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="./Assets/Foto.jpg" alt="Foto de Rafael Silva" class="Foto-perfil">
+            <h1>Rafael de Souza Silva</h1>
+            <p>Desenvolvedor Full-Stack Delphi</p>
+        </div>
+    </main>
+
+        <section id="sobre" class="sobre">
+            <h2 class="sobre-titulo">Sobre mim</h2>
+                <div class="sobre-caixa">
+                     <p class="sobre-paragrafo">
+                        Olá Acredito muito na frase: "O desafio é nossa energia". Sou um desenvolvedor apaixonado por tecnologia e inovação. Tenho experiência em Delphi e estou sempre em busca de novos desafios.
+                    </p>
+                </div>
+        </section>
+
+        <section id="projetos" class="projetos">
+            <h2 class="projetos-titulo">Meus Projetos</h2>
+            <div class="projetos-caixa">
+             
+                <div class="projetos-card">
+                    <img src="./Assets/foto-projeto/proj-01.png" alt="projeto-chatbot" class="projetos-imagem">
+                    <h3 class="info-projetos">ChatBot</h3>
+                    <p class="paragrafo-projetos">ChatBot de automação de envio de mensagem via whatsapp Web.</p>
+                </div>
+
+                <div class="projetos-card">
+                    <img src="./Assets/foto-projeto/proj-02.png" alt="projeto-portifolio" class="projetos-imagem">
+                    <h3 class="info-projetos">Portifólio</h3>
+                    <p class="paragrafo-projetos">Portifólio Pessoal.</p>
+                </div>
+            </div>  
+        </section>        
+
+        <section id="Contatos" class="Contatos">
+            <h2 class="contatos-titulo">Contatos</h2>
+            <form class="formulario-contato" id="formulario">
+                <div class="grupo-form">
+                    <input placeholder="nome" class="campo-form">
+                </div>
+                <div>
+                    <textarea class="text-form" placeholder="Digite sua mensagem"></textarea>
+                </div>
+            </form>
+        </section>      
+        
 </body>
 </html>
