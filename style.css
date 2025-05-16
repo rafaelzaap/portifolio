@@ -88,6 +88,7 @@ body {
     border-radius: 50%;
     margin: 2rem 0 1rem;
     border: 4px solid var(--vidro);
+    animation: flutuar 5s ease-in-out infinite;
 }
 
 
@@ -239,3 +240,46 @@ body {
 .botao-form:hover{
     transform: translatey(-3px);    
 }
+
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 60%),
+    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 60%),
+    var(--maisescura);               
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.rodape{
+    background: rgb(84, 84, 84, 0.8);
+    color: var(--claro);
+    text-align: center;
+    padding: 1rem;
+}
+
+.redes-sociais{
+    display: flex;
+    color: var(--escura);
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;    
+}
+.redes-sociais:visited{
+    color: var(--escura);
+}
+

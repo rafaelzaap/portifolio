@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <div class="particulas"></div>
+
     <nav class="navegacao">
         <ul class="menu">
             <li>
@@ -36,15 +38,21 @@
         <h2 class="sobre-titulo">Sobre mim</h2>
         <div class="sobre-caixa">
             <p class="sobre-paragrafo">
-                Olá, sou o Rafael. Acredito muito na frase: "O desafio é nossa energia". Sou curioso desde criança, quando desmontava todos os meus brinquedos para enteder e averiguar como eram feitos as peças por dentro.<br>
+                Olá, sou o Rafael. Acredito muito na frase: "O desafio é nossa energia". Sou curioso desde criança,
+                quando desmontava todos os meus brinquedos para enteder e averiguar como eram feitos as peças por
+                dentro.<br>
                 <br>
-                Cresci, com o passar do tempo criei certo fascínio por resolver problemas. Posso dizer que sou multi-disciplinar e meio generalista em diversas áreas.<br>
+                Cresci, com o passar do tempo criei certo fascínio por resolver problemas. Posso dizer que sou
+                multi-disciplinar e meio generalista em diversas áreas.<br>
                 <br>
-                Sou formado em alguns cursos técnicos (Informática, Automação e Eletrotécnico), hoje estou cursando minha primeira graduação em Análise e Desenvolvimento de Sistemas.<br>
+                Sou formado em alguns cursos técnicos (Informática, Automação e Eletrotécnico), hoje estou cursando
+                minha primeira graduação em Análise e Desenvolvimento de Sistemas.<br>
                 <br>
-                Em 2022, tive minha primeira oportunidade de ingressar na área de desenvolvimento usando a linguagem Pascal (Delphi) e desde então, estou atuante absorvendo cada dia mais outras ferramentas e linguagens que vão sendo acrescidas ao projeto.<br>    
+                Em 2022, tive minha primeira oportunidade de ingressar na área de desenvolvimento usando a linguagem
+                Pascal (Delphi) e desde então, estou atuante absorvendo cada dia mais outras ferramentas e linguagens
+                que vão sendo acrescidas ao projeto.<br>
                 <br>
-                <p class="frase"> Ebenézer, Até aqui o Senhor nos ajudou. 1SA 7:12. </p>
+            <p class="frase"> Ebenézer, Até aqui o Senhor nos ajudou. 1SA 7:12. </p>
             </p>
         </div>
     </section>
@@ -69,16 +77,54 @@
 
     <section id="contato" class="contatos">
         <h2 class="contatos-titulo">Entre em contato</h2>
-        <form class="formulario-contato" id="formulario">
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhatsApp(event)">
             <div class="grupo-form">
-                <input placeholder="nome" class="campo-form">
+                <input placeholder="nome" class="campo-form" id="nome">
             </div>
-            <div class="grupo-form">              
-                <textarea class="campo-form" placeholder="Digite sua mensagem"></textarea>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="4" id="mensagem"></textarea>
             </div>
             <button type="submit" class="botao-form">Enviar WhatsApp</button>
         </form>
     </section>
+
+    <script>
+
+        function enviarWhatsApp(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            if (nome === '' || mensagem === '') {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+            if (mensagem.length > 1000) {
+                alert('A mensagem deve ter no máximo 1000 caracteres.');
+                return;
+            }
+            
+            const telefone = '5522998918409';
+            const texto = `Olá, me chamo ${nome}, ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+            const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${msgFormatada}`;
+
+            window.open(url, '_blank');
+
+            document.getElementById('formulario').reset();
+            alert('Mensagem enviada com sucesso!');
+
+        }
+    </script>
+
+    <footer class="rodape">
+        <p class="rodape-texto">Desenvolvido por Rafael Silva</p>
+        <div class="redes-sociais">
+            <a href="https://www.linkedin.com/in/rafaelzaap/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/rafaelzaap" target="_blank">GitHub</a>
+        </div>
+    </footer>
 
 </body>
 
