@@ -1,74 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rafael Silva</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <nav class="navegacao">
-        <ul>
+        <ul class="menu">
             <li>
-                <a href="#inicio">Início</a>
+                <a href="#inicio" class="menu-link">Início</a>
             </li>
             <li>
-                <a href="#sobre">Sobre</a>
+                <a href="#sobre" class="menu-link">Sobre</a>
             </li>
             <li>
-                <a href="#projetos">Projetos</a>
+                <a href="#projetos" class="menu-link">Projetos</a>
             </li>
             <li>
-                <a href="#contatos">Contatos</a>
+                <a href="#contato" class="menu-link">Contato</a>
             </li>
         </ul>
     </nav>
 
     <main id="inicio" class="cabecalho">
-        <div>
-            <img src="./Assets/Foto.jpg" alt="Foto de Rafael Silva" class="Foto-perfil">
-            <h1>Rafael de Souza Silva</h1>
-            <p>Desenvolvedor Full-Stack Delphi</p>
-        </div>
+        <img src="./Assets/Foto.jpg" alt="Foto de Rafael Silva" class="foto-perfil">
+        <h1 class="rafael-nome">Rafael de Souza Silva</h1>
+        <p class="dev-nome">Desenvolvedor Full-Stack Delphi</p>
     </main>
 
-        <section id="sobre" class="sobre">
-            <h2 class="sobre-titulo">Sobre mim</h2>
-                <div class="sobre-caixa">
-                     <p class="sobre-paragrafo">
-                        Olá Acredito muito na frase: "O desafio é nossa energia". Sou um desenvolvedor apaixonado por tecnologia e inovação. Tenho experiência em Delphi e estou sempre em busca de novos desafios.
-                    </p>
-                </div>
-        </section>
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá, sou o Rafael. Acredito muito na frase: "O desafio é nossa energia". Sou curioso desde criança, quando desmontava todos os meus brinquedos para enteder e averiguar como eram feitos as peças por dentro.<br>
+                <br>
+                Cresci, com o passar do tempo criei certo fascínio por resolver problemas. Posso dizer que sou multi-disciplinar e meio generalista em diversas áreas.<br>
+                <br>
+                Sou formado em alguns cursos técnicos (Informática, Automação e Eletrotécnico), hoje estou cursando minha primeira graduação em Análise e Desenvolvimento de Sistemas.<br>
+                <br>
+                Em 2022, tive minha primeira oportunidade de ingressar na área de desenvolvimento usando a linguagem Pascal (Delphi) e desde então, estou atuante absorvendo cada dia mais outras ferramentas e linguagens que vão sendo acrescidas ao projeto.<br>    
+                <br>
+                <p class="frase"> Ebenézer, Até aqui o Senhor nos ajudou. 1SA 7:12. </p>
+            </p>
+        </div>
+    </section>
 
-        <section id="projetos" class="projetos">
-            <h2 class="projetos-titulo">Meus Projetos</h2>
-            <div class="projetos-caixa">
-             
-                <div class="projetos-card">
-                    <img src="./Assets/foto-projeto/proj-01.png" alt="projeto-chatbot" class="projetos-imagem">
-                    <h3 class="info-projetos">ChatBot</h3>
-                    <p class="paragrafo-projetos">ChatBot de automação de envio de mensagem via whatsapp Web.</p>
-                </div>
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
 
-                <div class="projetos-card">
-                    <img src="./Assets/foto-projeto/proj-02.png" alt="projeto-portifolio" class="projetos-imagem">
-                    <h3 class="info-projetos">Portifólio</h3>
-                    <p class="paragrafo-projetos">Portifólio Pessoal.</p>
-                </div>
-            </div>  
-        </section>        
+            <div class="projetos-card">
+                <img src="./Assets/foto-projeto/proj-01.png" alt="projeto-chatbot" class="projetos-imagem">
+                <h3 class="info-projetos">ChatBot</h3>
+                <p class="paragrafo-projetos">ChatBot de automação de envio de mensagem via whatsapp Web.</p>
+            </div>
 
-        <section id="Contatos" class="Contatos">
-            <h2 class="contatos-titulo">Contatos</h2>
-            <form class="formulario-contato" id="formulario">
-                <div class="grupo-form">
-                    <input placeholder="nome" class="campo-form">
-                </div>
-                <div>
-                    <textarea class="text-form" placeholder="Digite sua mensagem"></textarea>
-                </div>
-            </form>
-        </section>      
-        
+            <div class="projetos-card">
+                <img src="./Assets/foto-projeto/proj-02.png" alt="projeto-portifolio" class="projetos-imagem">
+                <h3 class="info-projetos">Portifólio</h3>
+                <p class="paragrafo-projetos">Portifólio Pessoal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato</h2>
+        <form class="formulario-contato" id="formulario">
+            <div class="grupo-form">
+                <input placeholder="nome" class="campo-form">
+            </div>
+            <div class="grupo-form">              
+                <textarea class="campo-form" placeholder="Digite sua mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
+
 </body>
+
 </html>
